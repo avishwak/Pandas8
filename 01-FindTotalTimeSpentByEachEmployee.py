@@ -35,7 +35,7 @@ def total_time(employees: pd.DataFrame) -> pd.DataFrame:
 - if we use two values in the groupby then it will return a DataFrameGroupBy object with a multi-index, so we need reset index
 
 - transform returns a series and it will not work here because it returns one column and multiple entry for each group, 
-and then mapping it to the original DataFrame will not work as expected.
+and then mapping it to the original DataFrame will not work as expected. (transform is like partition by in SQL, it returns the same number of rows as the original DataFrame)
 0    173
 1    173
 2     41
